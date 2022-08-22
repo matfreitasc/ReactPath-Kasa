@@ -1,0 +1,20 @@
+@use './components/variables.sass' as *
+@use './components/navbar.sass' as *
+@use './components/thumb.sass' as *
+@use './components/carousel.sass' as *
+@use './pages/home.sass' as *
+@use './pages/error.sass' as *
+@use './pages/profile.sass' as *
+
+
+#root
+    font-family: $font-family
+    padding: 0px
+    margin: 0px 100px
+    max-width: 1240px
+    margin: 0 auto
+    @media screen and (max-width: 768px)
+        margin: 0px
+        padding: 10px
+        overflow-x: hidden !important
+        

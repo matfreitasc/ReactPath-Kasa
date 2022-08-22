@@ -1,0 +1,47 @@
+@use './variables.sass' as *
+
+.navbar
+    display: flex 
+    align-content: center
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    img 
+        height: 120px
+        width: auto
+        margin-right: 20px
+        @media (max-width: 768px) 
+            height: 80px
+
+
+    .list 
+        color: $primary-color
+        display: flex
+        align-items: center
+        align-content: center
+        justify-content: space-between
+        list-style: none
+        gap: 60px
+        @media (max-width: 768px) 
+            gap: 20px
+            
+        .links
+            font-size: 24px
+            font-family: "Montserrat", sans-serif
+            font-weight: 500
+            @media (max-width: 768px) 
+                font-size: 18px
+            a
+                text-decoration: none
+                color: $primary-color
+                transition: color 0.3s ease-in-out
+                &:hover
+                    text-decoration: none
+                    color: $primary-color
+                    filter: brightness(1.5)
+                    cursor: pointer
+
+.underline
+    text-decoration: underline !important
+    color: $primary-color !important
+
