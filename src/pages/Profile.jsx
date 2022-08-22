@@ -16,8 +16,8 @@ function Profile() {
 
   useEffect(() => {
     const loadData = async () => {
-      const profile = data.find((item) => item.title == name);
-      const hostData = data.find((item) => item.title == name).host;
+      const profile = data.find((item) => item.title === name);
+      const hostData = data.find((item) => item.title === name).host;
       setProfile(profile);
       setHost(hostData);
       setPictures(profile.pictures);
