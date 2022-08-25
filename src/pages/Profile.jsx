@@ -36,23 +36,23 @@ function Profile() {
   return (
     <section className='Profilecontainer'>
       <Carousel images={pictures} />
-      <div className='title-flex'>
+      <div className='ProfileHeader'>
         <div className='title-container'>
           <h1 className='profile-title'>{name}</h1>
           <h2 className='subtitle'>{profile.location}</h2>
+          <div className='amenities tagline-tag'>
+            {tags.map((tags, index) => (
+              <Tagline key={index} tags={tags} />
+            ))}
+          </div>
         </div>
-        <div className='profile-avatar'>
-          <p>{host.name}</p>
-          <img alt={`${host.name} avatar`} src={host.picture} />
-        </div>
-      </div>
-      <div className='tagline-tag'>
-        <div className='amenities'>
-          {tags.map((tags, index) => (
-            <Tagline key={index} tags={tags} />
-          ))}
-        </div>
-        <div className='profile-rating'>
+        <div className='people-section'>
+          <div className='profile-rating'>
+            <div className='profile-avatar'>
+              <p className='avatar-name '>{host.name}</p>
+              <img alt={`${host.name} avatar`} src={host.picture} />
+            </div>
+          </div>
           <Ratings value={profile.rating} />
         </div>
       </div>

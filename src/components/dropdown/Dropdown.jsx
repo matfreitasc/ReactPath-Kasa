@@ -15,9 +15,9 @@ function Dropdown(props) {
       >
         <h1 className='dropdown-title-text'>{props.title}</h1>
         {isOpen ? (
-          <FaAngleDown className='dropdown-title-icon' />
-        ) : (
           <FaAngleUp className='dropdown-title-icon' />
+        ) : (
+          <FaAngleDown className='dropdown-title-icon' />
         )}
       </article>
       <div

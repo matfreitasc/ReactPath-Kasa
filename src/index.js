@@ -6,9 +6,9 @@ import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <HashRouter>
+  <BrowserRouter>
     <Routes>
       <Route path='/*' element={<App />} />
     </Routes>
-  </HashRouter>
+  </BrowserRouter>
 );

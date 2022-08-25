@@ -15,10 +15,10 @@ function Ratings(props) {
             />
             <FaStar
               className={
-                ('star',
-                ratingValue <= props.value ? 'yellow-star' : 'gray-star')
+                ratingValue <= props.value
+                  ? 'star yellow-star'
+                  : 'star gray-star'
               }
-              size={30}
             />
           </label>
         );

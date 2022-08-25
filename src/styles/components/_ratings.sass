@@ -3,11 +3,16 @@
 .start-label
     input[type="radio"]
         display: none
-    .star
-        cursor: pointer
-        transition: color 200ms ease-in-out
+
 
 .gray-star
     color: #ccc
 .yellow-star
     color: $primary-color
+
+.star
+    width: 30px
+    height: 30px
+    @media (max-width: 768px)
+        width: 12px
+        height: 12px

@@ -1,52 +1,62 @@
 @use '../components/variables.sass' as *
-Profilecontainer
-    @media (max-width: 768px)
-        margin: 0px
-        padding: 20px
 
-.title-flex
-    display: flex 
-    align-items: center
-    justify-content: space-between
-
-.profile-title
-    font-size: 36px
-    font-weight: 500
-    color: $primary-color
-    margin-bottom: 20px
-
-    
-.subtitle
-    font-size: 18px
-    font-weight: 500
-    color: $primary-color
-    margin-bottom: 20px
-    line-height: 25px
-
-.profile-avatar
-    position: relative
-    width: 130px
+.ProfileHeader
     display: flex
-    justify-content: center
-    align-items: center
-    align-content: center
-    flex-wrap: nowrap
-    p
-        text-align: end
-        font-size: 18px
+    justify-content: space-between
+    align-items: flex-end
+    @media (max-width: 768px)
+        flex-direction: column
+        align-items: flex-start
+
+    .title-container
         color: $primary-color
-        margin-right: 10px
-        font-weight: 500
-    img
-        width: 64px
-        height: 64px
-        object-fit: cover
-        object-position: center
-        filter: brightness(0.75)
-        border-radius: 50%
-        @media (max-width: 768px) 
+        font-weight: 400
+        @media (max-width: 768px)
             width: 100%
-            min-height: 110px
-            border-radius: 10px
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2)
-    
+        .profile-title
+            margin: 0
+            font-size: 36px
+            font-weight: 500
+            font-family: Monstserrat
+            @media (max-width: 768px)
+                font-size: 18px
+        .subtitle
+            font-size: 18px
+            margin: 5px 0 23px  0 
+            font-weight: 200
+            @media (max-width: 768px)
+                font-size: 14px
+    .people-section
+        display: flex
+        align-items: flex-end
+        flex-direction: column
+        gap: 25px
+        @media (max-width: 768px)
+            gap: 0
+            width: 100%
+            flex-direction: row-reverse
+            align-items: center
+            justify-content: space-between
+
+        .profile-avatar
+            display: flex
+            flex-direction: row
+            align-items: center
+            gap: 20px
+            .avatar-name 
+                font-size: 18px
+                font-weight: 300
+                color: $primary-color
+                text-align: end
+                max-width: 52px
+                @media (max-width: 768px)
+                    font-size: 12px
+
+            img
+                height: 64px
+                width: 64px
+                border-radius: 50%
+                object-fit: cover
+                @media (max-width: 768px)
+                    width: 32px
+                    height: 32px
