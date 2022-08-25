@@ -9,9 +9,10 @@ function Carousel(props) {
   const [images, setImages] = useState();
   const [imageLenght, setImageLenght] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [touchPosition, setTouchPosition] = useState(null);
 
   useEffect(() => {
-    if (props.images == undefined) {
+    if (props.images === undefined) {
       setIsLoading(true);
     } else {
       setIsLoading(false);
@@ -19,6 +20,31 @@ function Carousel(props) {
       setImages(props.images);
     }
   }, [props.images, isLoading]);
+
+  const handleTouchStart = (e) => {
+    const touchDown = e.touches[0].clientX;
+    setTouchPosition(touchDown);
+  };
+  const handleTouchMove = (e) => {
+    const touchDown = touchPosition;
+
+    if (touchDown === null) {
+      return;
+    }
+
+    const currentTouch = e.touches[0].clientX;
+    const diff = touchDown - currentTouch;
+
+    if (diff > 5 && currentIndex < imageLenght + 1) {
+      nextImage();
+    } else if (diff < 5 && currentIndex >= 0) {
+      previousImage();
+    } else {
+      return;
+    }
+
+    setTouchPosition(null);
+  };
 
   const nextImage = () => {
     if (currentIndex < props.images.length - 1) {
@@ -36,7 +62,11 @@ function Carousel(props) {
   };
   return (
     <Fragment>
-      <div className='carousel-banner '>
+      <div
+        className='carousel-banner '
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+      >
         <div className='carousel-grid'>
           <FaChevronLeft className='icon icon-left' onClick={previousImage} />
           <img
