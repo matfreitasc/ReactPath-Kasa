@@ -1,2 +1,52 @@
 @use '../components/variables.sass' as *
+Profilecontainer
+    @media (max-width: 768px)
+        margin: 0px
+        padding: 20px
 
+.title-flex
+    display: flex 
+    align-items: center
+    justify-content: space-between
+
+.profile-title
+    font-size: 36px
+    font-weight: 500
+    color: $primary-color
+    margin-bottom: 20px
+
+    
+.subtitle
+    font-size: 18px
+    font-weight: 500
+    color: $primary-color
+    margin-bottom: 20px
+    line-height: 25px
+
+.profile-avatar
+    position: relative
+    width: 130px
+    display: flex
+    justify-content: center
+    align-items: center
+    align-content: center
+    flex-wrap: nowrap
+    p
+        text-align: end
+        font-size: 18px
+        color: $primary-color
+        margin-right: 10px
+        font-weight: 500
+    img
+        width: 64px
+        height: 64px
+        object-fit: cover
+        object-position: center
+        filter: brightness(0.75)
+        border-radius: 50%
+        @media (max-width: 768px) 
+            width: 100%
+            min-height: 110px
+            border-radius: 10px
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2)
+    

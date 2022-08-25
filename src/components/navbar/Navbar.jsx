@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Logo from '../../assets/kasaLogo.png';
-import { Link } from 'react-router-dom';
 
 function Navbar() {
   // get the current path

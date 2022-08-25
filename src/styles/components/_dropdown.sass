@@ -1,0 +1,85 @@
+@use './_variables.sass' as *
+.dropdowns-container
+    display: flex
+    align-content: center
+    justify-content: space-evenly
+    width: 100%
+    gap: 80px
+    margin-top: 26px
+    height: 90vh
+    .dropdown
+        width: 50%
+        position: relative
+        display: table
+        .dropdown-title
+            display: flex
+            flex-direction: row
+            align-items: center
+            align-content: center
+            justify-content: space-between
+            background-color: $primary-color
+            border-radius: 10px
+            padding: 10px
+            max-height: 52px
+            .dropdown-title-text
+                font-size: 18px
+                font-weight: 500
+                color: white
+                margin-bottom: 20px
+                line-height: 25px
+                -webkit-user-select: none /* Safari */        
+                -moz-user-select: none /* Firefox */
+                -ms-user-select: none/* IE10+/Edge */
+                user-select: none /* Standard */
+            .dropdown-title-icon
+                color: white
+                font-size: 26px
+                cursor: pointer
+        .dropdown-item
+            position: relative
+            top: -5px
+            z-index: -1
+            display: none
+            visibility: hidden
+            opacity: 0
+            background: $secondary-color
+            height: 0%
+            width: 100%
+            overflow: hidden
+            transition: display 0.2s ease-in-out 1s
+            font-size: 18px
+            color: $primary-color
+            letter-spacing: 1px
+            font-weight: 200
+            border-radius: 0 0 10px 10px
+            padding: 10px 0 10px 0px
+            .dropdown-list
+                padding: 20px
+                margin: 0
+                list-style: none
+                li 
+                    margin-top: 5px
+            .dropdown-description
+                padding: 20px
+                margin: 0 
+
+
+                text-align: start
+
+.item-display
+    display: block !important
+    visibility: visible !important
+    opacity: 1 !important
+    width: 100% !important
+    height: 100% !important
+
+.width-85
+    width: 85% !important
+
+.flex-wrap
+    flex-wrap: wrap !important
+    align-content: flex-start !important
+
+.fit-content
+    display: block !important
+    height: 25vh !important

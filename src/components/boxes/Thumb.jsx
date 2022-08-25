@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Thumb(props) {
   return (
@@ -9,7 +9,7 @@ function Thumb(props) {
         <br />
         {props.title}
       </div>
-      <Link to={`/${props.title}`} className='object-image'>
+      <Link to={`/profile/${props.title}`} className='object-image'>
         <img alt='Florest Banner' src={props.cover} />
       </Link>
     </article>

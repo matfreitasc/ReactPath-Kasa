@@ -1,17 +1,13 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import florest from '../assets/florest.png';
+import Banner from '../components/banner/Banner';
 import Thumb from '../components/boxes/Thumb';
 import data from '../data/data.json';
 
 function Home() {
   return (
     <Fragment>
-      <div className='banner'>
-        <img alt='Florest Banner' src={florest} />
-        <div className='text'>
-          <h1> Home anywhere and everywhere</h1>
-        </div>
-      </div>
+      <Banner src={florest} title='Home anywhere and everywhere' />
       <div className='container'>
         {data.map((item) => (
           <Thumb key={item.id} {...item} />

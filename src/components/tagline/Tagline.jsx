@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Tagline(props) {
-  return <div>{props.name}</div>;
+  return <span className='tagline'>{props.tags}</span>;
 }
 
 export default Tagline;

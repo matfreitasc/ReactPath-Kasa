@@ -7,14 +7,16 @@ import About from './pages/About';
 
 function App() {
   return (
-    <Routes>
-      <Route path='/' element={<Layout />}>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/:name' element={<Profile />} />
-        <Route path='*' element={<Error />} />
-      </Route>
-    </Routes>
+    <div className='page-container'>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/profile/:name' element={<Profile />} />
+          <Route path='*' element={<Error />} />
+        </Route>
+      </Routes>
+    </div>
   );
 }
 
