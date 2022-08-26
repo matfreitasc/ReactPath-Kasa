@@ -4,6 +4,7 @@ import bannerImage from '../assets/gustavo-alves-YOXSC4zRcxw-unsplash 1.png';
 import Dropdown from '../components/dropdown/Dropdown';
 
 function About() {
+  document.title = 'About';
   return (
     <Fragment>
       <Banner src={bannerImage} />
