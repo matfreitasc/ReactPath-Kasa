@@ -1,20 +1,8 @@
 import React, { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import Logo from '../../assets/kasaLogo.png';
 
 function Navbar() {
-  // get the current path
-  const path = window.location.pathname;
-  useEffect(() => {
-    const navbarLinks = document.querySelectorAll('.list li');
-    navbarLinks.forEach((link) => {
-      if (link.firstChild.getAttribute('href') === path) {
-        link.classList.add('underline');
-        // reload the page when the path changes
-      } else {
-        link.classList.remove('underline');
-      }
-    });
-  }, [path]);
   return (
     <header className='navbar'>
       <a href='/'>
@@ -22,11 +10,21 @@ function Navbar() {
       </a>
       <nav>
         <ul className='list'>
-          <li className='links'>
-            <a href='/'>Home</a>
+          <li>
+            <NavLink
+              to='/'
+              className={({ isActive }) => (isActive ? 'underline' : '')}
+            >
+              Home
+            </NavLink>
           </li>
-          <li className='links'>
-            <a href='/about'>About</a>
+          <li>
+            <NavLink
+              to='/about'
+              className={({ isActive }) => (isActive ? 'underline' : '')}
+            >
+              About
+            </NavLink>
           </li>
         </ul>
       </nav>
