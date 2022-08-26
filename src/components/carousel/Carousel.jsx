@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import Placeholder from '../../assets/Background.png';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 function Carousel(props) {

@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import florest from '../assets/florest.png';
 import Banner from '../components/banner/Banner';
 import Thumb from '../components/boxes/Thumb';

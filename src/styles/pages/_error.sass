@@ -1,22 +1,37 @@
 @use "../components/variables.sass" as *
 
 .error-container
+    display: flex
+    flex-direction: column
     justify-content: center
     align-items: center
     align-content: center
-    height: 20vh
     text-align: center
     position: relative
     color: $primary-color
+    @media  (max-width: 378px)
+        margin-bottom: 50px
     h1
         font-size: 288px
+        @media  (max-width: 378px)
+            font-size: 96px
     h2
         position: relative
         top: -220px
         width: 100%
         font-size: 36px
+        font-weight: 500
+        @media  (max-width: 378px)
+            top: -80px
+            width: 209px
+            line-break: normal
+            text-align: center
+            font-size: 18px
     a
         position: relative
-        top: -60px
+        bottom: 60px
         font-size: 18px
         color: $primary-color
+        font-weight: 500
+        @media  (max-width: 378px)
+            bottom:  0px
