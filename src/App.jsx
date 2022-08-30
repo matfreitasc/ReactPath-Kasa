@@ -6,18 +6,19 @@ import Profile from './pages/Profile';
 import About from './pages/About';
 
 function App() {
-  return (
-    <div className='page-container'>
-      <Routes>
-        <Route path='/' element={<Layout />}>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/profile/:name' element={<Profile />} />
-          <Route path='*' element={<Error />} />
-        </Route>
-      </Routes>
-    </div>
-  );
+	return (
+		<div className='page-container'>
+			<Routes>
+				<Route path='/' element={<Layout />}>
+					<Route index element={<Home />} exact />
+					<Route path='/about' element={<About />} />
+					<Route path='/profile/*' element={<Error />} />
+					<Route path='/profile/:name' element={<Profile />} />
+					<Route path='*' element={<Error />} />
+				</Route>
+			</Routes>
+		</div>
+	);
 }
 
 export default App;
