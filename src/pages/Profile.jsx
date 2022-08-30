@@ -39,7 +39,7 @@ function Profile() {
 				}
 			}, 100);
 		}
-	}, [name]);
+	}, [name, loading]);
 	return (
 		<section className='Profilecontainer'>
 			<Carousel images={pictures} />
